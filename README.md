@@ -30,7 +30,7 @@ Install [Node.js](https://nodejs.org/) if it isn't already installed.
 
 ```bash
 git clone https://github.com/Bibek-M/Local-converter.git
-cd LocalConvert
+cd Local-Converter
 npm install
 npm run dev
 ```
