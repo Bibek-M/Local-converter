@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 234 88 12;
+    --background: 250 247 242;
+    --card: 255 251 245;
+    --border: 237 225 211;
+  }
+
+  .dark {
+    --primary: 249 115 22;
+    --background: 18 16 14;
+    --card: 26 22 20;
+    --border: 46 38 32;
+  }
+
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Material elevation and card utilities */
+.material-card {
+  @apply bg-[#fffbf5]/90 dark:bg-[#1a1614]/90 backdrop-blur-md border border-[#edd7c2] dark:border-[#2e2620] rounded-3xl transition-all duration-200 shadow-sm hover:shadow-warm-card;
+}
+
+.material-card-active {
+  @apply bg-brand-50/70 dark:bg-brand-900/30 border-brand-500/80 dark:border-brand-500/80 shadow-md;
+}
+
+/* Ripple / hover effects */
+.interactive-tap {
+  @apply transition-transform active:scale-[0.98] duration-150;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-stone-300 dark:bg-stone-700 rounded-full hover:bg-stone-400 dark:hover:bg-stone-600;
+}
+
+/* Pulse animation for converting state */
+@keyframes softPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.01);
+  }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
