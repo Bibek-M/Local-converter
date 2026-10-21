@@ -1,32 +1,61 @@
-# React + TypeScript + Vite
+# 🍃 LocalConvert
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**A privacy-first, offline-capable file converter that runs directly in your browser.**
 
-Currently, two official plugins are available:
+LocalConvert lets you convert images, PDFs, CBZ comics, and other supported formats without uploading your files to a cloud server. Built with a clean, anime-inspired interface, it combines local processing with a simple user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🔒 **Privacy First** — Files are processed locally for supported conversions.
+- 📡 **Offline Support** — Use cached app features without an internet connection.
+- 🖼️ **Image to PDF** — Convert images into PDFs with supported layout options.
+- 📚 **CBZ Comic Tools** — Preview comic pages and convert CBZ archives into PDFs or images.
+- ⚡ **Browser-Based Processing** — Uses browser APIs and WebAssembly where supported.
+- 🎨 **Anime-Inspired UI** — A cozy, nature-inspired interface designed for a pleasant experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the Oxlint configuration
+- React
+- TypeScript
+- Vite
+- Progressive Web App (PWA)
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🚀 Getting Started
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+### Prerequisites
+
+Install [Node.js](https://nodejs.org/) if it isn't already installed.
+
+### Installation
+
+```bash
+git clone https://github.com/Bibek-M/Local-converter.git
+cd LocalConvert
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open the local URL displayed in your terminal.
+
+### Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+## 🔐 Privacy
+
+LocalConvert is designed to process files on the user's device, avoiding cloud uploads for supported tools. Offline availability depends on the app being cached and the required conversion resources being available locally.
+
+## 📌 Project Status
+
+Actively developed. Supported formats and offline capabilities depend on the conversion engines implemented.
+
+## 📄 License
+
+Add your chosen license here.
+
+---
+
+**Convert locally. Keep your files private. 🍃**
